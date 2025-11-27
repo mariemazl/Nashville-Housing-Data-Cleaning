@@ -142,10 +142,8 @@ select *,
 			   UniqueID )row_num
          
 from PortfolioProject3..NashvilleHousing)
-select *
-from RowNumCTE
-where row_num >1
-order by PropertyAddress
+DELETE FROM RowNumCTE
+WHERE row_num > 1;
 
 
 --------------------------------------------------------------------------
@@ -158,4 +156,5 @@ from PortfolioProject3..NashvilleHousing
 Alter table PortfolioProject3..NashvilleHousing
 drop column OwnerAddress, TaxDistrict, PropertyAddress 
 Alter table PortfolioProject3..NashvilleHousing
+
 drop column SaleDate
